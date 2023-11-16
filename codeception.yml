@@ -1,4 +1,4 @@
-namespace: ValanticSpryker
+namespace: ValanticSprykerTest
 
 suites:
   unit:
