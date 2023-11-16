@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 use PHP_CodeSniffer\Config;
 
 define('APPLICATION_ROOT_DIR', __DIR__);
