@@ -11,6 +11,6 @@ class ContentPageRedisSitemapCreator implements ContentPageSitemapCreatorInterfa
   */
     public function createContentPagesSitemapXml(): array
     {
-        return [];
+        return []; // @todo Implement Redis provider, if necessary use case arises
     }
 }
