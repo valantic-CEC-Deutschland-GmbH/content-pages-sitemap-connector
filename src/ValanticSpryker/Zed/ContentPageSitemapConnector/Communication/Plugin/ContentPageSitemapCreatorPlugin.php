@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace ValanticSpryker\Zed\ContentPageSitemapConnector\Communication;
+namespace ValanticSpryker\Zed\ContentPageSitemapConnector\Communication\Plugin;
 
 use Spryker\Glue\Kernel\Backend\AbstractPlugin;
 use ValanticSpryker\Zed\Sitemap\Dependency\Plugin\SitemapCreatorPluginInterface;
