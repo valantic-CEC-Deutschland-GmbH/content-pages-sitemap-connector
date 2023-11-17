@@ -12,7 +12,6 @@ use ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator\Conte
 use ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator\ContentPageSitemapCreatorInterface;
 use ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorConfig;
 use ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorDependencyProvider;
-use ValanticSpryker\Zed\ProductAbstractSitemapConnector\ProductAbstractSitemapConnectorDependencyProvider;
 
 /**
  * @method \ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorConfig getConfig()
@@ -69,6 +68,6 @@ class ContentPageSitemapConnectorBusinessFactory extends AbstractBusinessFactory
      */
     private function getStoreFacade(): StoreFacadeInterface
     {
-        return $this->getProvidedDependency(ProductAbstractSitemapConnectorDependencyProvider::FACADE_STORE);
+        return $this->getProvidedDependency(ContentPageSitemapConnectorDependencyProvider::FACADE_STORE);
     }
 }
