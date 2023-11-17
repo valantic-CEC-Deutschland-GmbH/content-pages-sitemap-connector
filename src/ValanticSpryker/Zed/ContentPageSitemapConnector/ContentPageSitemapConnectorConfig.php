@@ -10,7 +10,7 @@ use ValanticSpryker\Shared\Sitemap\SitemapConstants;
 
 class ContentPageSitemapConnectorConfig extends AbstractBundleConfig
 {
-    public const RESOURCE_TYPE = 'contentPages';
+    public const RESOURCE_TYPE = 'content_pages';
 
     public const REDIS_RETRIEVAL = 'redis';
 
