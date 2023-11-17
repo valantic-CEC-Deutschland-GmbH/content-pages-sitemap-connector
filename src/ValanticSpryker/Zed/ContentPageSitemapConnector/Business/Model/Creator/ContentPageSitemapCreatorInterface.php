@@ -7,7 +7,7 @@ namespace ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator
 interface ContentPageSitemapCreatorInterface
 {
     /**
-     * @return array
+     * @return array<\Generated\Shared\Transfer\SitemapFileTransfer>
      */
     public function createContentPagesSitemapXml(): array;
 }

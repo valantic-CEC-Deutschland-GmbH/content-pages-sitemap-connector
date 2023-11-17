@@ -8,9 +8,7 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
 use Spryker\Zed\Store\Business\StoreFacadeInterface;
 use ValanticSpryker\Service\Sitemap\SitemapServiceInterface;
 use ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator\ContentPageDatabaseSitemapCreator;
-use ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator\ContentPageRedisSitemapCreator;
 use ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator\ContentPageSitemapCreatorInterface;
-use ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorConfig;
 use ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorDependencyProvider;
 use ValanticSpryker\Zed\ProductAbstractSitemapConnector\ProductAbstractSitemapConnectorDependencyProvider;
 
@@ -25,35 +23,12 @@ class ContentPageSitemapConnectorBusinessFactory extends AbstractBusinessFactory
      */
     public function createProductSitemapCreator(): ContentPageSitemapCreatorInterface
     {
-        switch ($this->getConfig()->resourceRetrievalMethod()) {
-            case ContentPageSitemapConnectorConfig::REDIS_RETRIEVAL:
-                return $this->createContentPageRedisSitemapCreator();
-            case ContentPageSitemapConnectorConfig::DATABASE_RETRIEVAL:
-                return $this->createContentPageDatabaseSitemapCreator();
-            default:
-                return $this->createContentPageDatabaseSitemapCreator();
-        }
-    }
-
-    /**
-     * @return \ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator\ContentPageSitemapCreatorInterface
-     */
-    private function createContentPageDatabaseSitemapCreator(): ContentPageSitemapCreatorInterface
-    {
         return new ContentPageDatabaseSitemapCreator(
             $this->getSitemapService(),
             $this->getStoreFacade(),
             $this->getConfig(),
             $this->getRepository(),
         );
-    }
-
-    /**
-     * @return \ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator\ContentPageSitemapCreatorInterface
-     */
-    private function createContentPageRedisSitemapCreator(): ContentPageSitemapCreatorInterface
-    {
-        return new ContentPageRedisSitemapCreator();
     }
 
     /**

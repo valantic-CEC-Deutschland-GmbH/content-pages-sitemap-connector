@@ -10,7 +10,7 @@ interface ContentPageSitemapConnectorFacadeInterface
      *  Specification:
      *  - Creates sitemap XML to be consumed by parent module.
      *
-     * @return array
+     * @return array<\Generated\Shared\Transfer\SitemapFileTransfer>
      */
     public function createSitemapXml(): array;
 }

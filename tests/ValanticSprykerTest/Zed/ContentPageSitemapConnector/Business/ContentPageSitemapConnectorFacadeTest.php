@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 use Codeception\Test\Unit;
 use Generated\Shared\Transfer\SitemapFileTransfer;
 use Orm\Zed\Url\Persistence\Map\SpyUrlTableMap;
@@ -13,6 +15,9 @@ class ContentPageSitemapConnectorFacadeTest extends Unit
 {
     public ContentPageSitemapConnectorTester $tester;
 
+    /**
+     * @return void
+     */
     public function testFacadeRendersCorrectAmountOfUrlsWithCorrectStructure(): void
     {
         // Arrange
@@ -31,7 +36,7 @@ class ContentPageSitemapConnectorFacadeTest extends Unit
                ->count();
 
         // Act
-        /** @var array<SitemapFileTransfer> $result */
+        /** @var array<\Generated\Shared\Transfer\SitemapFileTransfer> $result */
         $result = $contentPageConnectorFacade->createSitemapXml()[0] ?? null;
 
         // Assert
