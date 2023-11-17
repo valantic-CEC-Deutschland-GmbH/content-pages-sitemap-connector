@@ -34,19 +34,25 @@ class ContentPageSitemapConnectorRepository extends AbstractRepository implement
                ->endUse()
            ->endUse()
            ->addJoin(SpyUrlTableMap::COL_ID_URL, SpyUrlStorageTableMap::COL_FK_URL, Criteria::INNER_JOIN)
-           ->withColumn(SpyUrlStorageTableMap::COL_UPDATED_AT, 'updated_at');
-
-        if ($page !== null && $pageLimit !== null) {
-            $offset = ($page - 1) * $pageLimit;
-            $query
-               ->setOffset($offset)
-               ->setLimit($pageLimit);
-        }
+           ->withColumn(SpyUrlStorageTableMap::COL_UPDATED_AT, 'updated_at')
+           ->setOffset($this->calculateOffsetByPage($page, $pageLimit))
+           ->setLimit($pageLimit);
 
         return $this->getFactory()
             ->createContentPageSitemapMapper()
             ->mapUrlEntitiesToSitemapUrlTransfers(
                 $query->find(),
             );
+    }
+
+    /**
+     * @param int $page
+     * @param int $pageLimit
+     *
+     * @return int
+     */
+    private function calculateOffsetByPage(int $page, int $pageLimit): int
+    {
+        return ($page - 1) * $pageLimit;
     }
 }
