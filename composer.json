@@ -59,6 +59,12 @@
         "spryker/architecture-sniffer": "^0.5.7",
         "spryker/development": "^3.34"
     },
+    "repositories": {
+        "gitlab.nxs360.com/461": {
+            "type": "composer",
+            "url": "https://gitlab.nxs360.com/api/v4/group/461/-/packages/composer/packages.json"
+        }
+    },
     "scripts": {
         "cs-fix": "../../vendor/bin/phpcbf --standard=phpcs.xml src",
         "cs-check": "../../vendor/bin/phpcs -s --standard=phpcs.xml --report=full src",
