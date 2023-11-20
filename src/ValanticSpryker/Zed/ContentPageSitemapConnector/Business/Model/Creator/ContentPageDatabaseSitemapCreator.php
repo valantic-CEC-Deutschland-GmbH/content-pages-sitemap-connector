@@ -6,6 +6,7 @@ namespace ValanticSpryker\Zed\ContentPageSitemapConnector\Business\Model\Creator
 
 use Spryker\Zed\Store\Business\StoreFacadeInterface;
 use ValanticSpryker\Service\Sitemap\SitemapServiceInterface;
+use ValanticSpryker\Shared\ContentPageSitemapConnector\ContentPageSitemapConnectorConstants;
 use ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorConfig;
 use ValanticSpryker\Zed\ContentPageSitemapConnector\Persistence\ContentPageSitemapConnectorRepositoryInterface;
 
@@ -70,7 +71,7 @@ class ContentPageDatabaseSitemapCreator implements ContentPageSitemapCreatorInte
                 $urlList,
                 $page,
                 $currentStoreTransfer->getName(),
-                ContentPageSitemapConnectorConfig::RESOURCE_TYPE,
+                ContentPageSitemapConnectorConstants::RESOURCE_TYPE,
             );
 
             if ($sitemapTransfer !== null) {
