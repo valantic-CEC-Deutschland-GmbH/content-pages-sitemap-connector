@@ -7,6 +7,7 @@ namespace ValanticSpryker\Zed\ContentPageSitemapConnector\Persistence\Mapper;
 use Generated\Shared\Transfer\SitemapUrlTransfer;
 use Orm\Zed\Url\Persistence\SpyUrl;
 use Propel\Runtime\Collection\ObjectCollection;
+use ValanticSpryker\Shared\ContentPageSitemapConnector\ContentPageSitemapConnectorConstants;
 use ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorConfig;
 
 class ContentPageSitemapConnectorMapper implements ContentPageSitemapConnectorMapperInterface
@@ -57,7 +58,7 @@ class ContentPageSitemapConnectorMapper implements ContentPageSitemapConnectorMa
             ->setUrl($this->formatUrl($urlEntity))
             ->setUpdatedAt($urlEntity->getVirtualColumn('updated_at'))
             ->setResourceId($urlEntity->getFkResourcePage())
-            ->setResourceType(ContentPageSitemapConnectorConfig::RESOURCE_TYPE);
+            ->setResourceType(ContentPageSitemapConnectorConstants::RESOURCE_TYPE);
     }
 
     /**
