@@ -15,7 +15,7 @@ class ContentPageSitemapConnectorMapper implements ContentPageSitemapConnectorMa
     /**
      * @var string
      */
-    private const URL_FORMAT = '%s%s/';
+    private const URL_FORMAT = '%s%s';
 
     /**
      * @var \ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorConfig
@@ -71,7 +71,7 @@ class ContentPageSitemapConnectorMapper implements ContentPageSitemapConnectorMa
         return sprintf(
             self::URL_FORMAT,
             $this->config->getYvesBaseUrl(),
-            rtrim($urlEntity->getUrl(), '/'),
+            $urlEntity->getUrl(),
         );
     }
 }
