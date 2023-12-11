@@ -38,7 +38,6 @@ class ContentPageSitemapConnectorFacadeTest extends Unit
     public ContentPageSitemapConnectorTester $tester;
 
     /**
-     * @skip
      *
      * @return void
      */
@@ -51,11 +50,6 @@ class ContentPageSitemapConnectorFacadeTest extends Unit
         $validEntries = SpyUrlQuery::create()
             ->filterByFkResourcePage(null, Criteria::ISNOTNULL)
             ->filterByFkResourceRedirect(null, Criteria::ISNULL)
-            ->useSpyLocaleQuery()
-                ->useLocaleStoreQuery()
-                    ->filterByFkStore($idStore)
-                ->endUse()
-            ->endUse()
             ->useCmsPageQuery()
                 ->useSpyCmsPageStoreQuery()
                     ->filterByFkStore($idStore)

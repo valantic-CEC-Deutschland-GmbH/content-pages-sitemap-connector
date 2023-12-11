@@ -29,11 +29,6 @@ class ContentPageSitemapConnectorRepository extends AbstractRepository implement
            ->createSpyUrlQuery()
            ->filterByFkResourcePage(null, Criteria::ISNOTNULL)
            ->filterByFkResourceRedirect(null, Criteria::ISNULL)
-           ->useSpyLocaleQuery()
-               ->useLocaleStoreQuery()
-                   ->filterByFkStore($currentStore->getIdStore())
-               ->endUse()
-           ->endUse()
            ->addJoin(
                [SpyUrlTableMap::COL_FK_RESOURCE_PAGE, $currentStore->getIdStore()],
                [SpyCmsPageStoreTableMap::COL_FK_CMS_PAGE, SpyCmsPageStoreTableMap::COL_FK_STORE],
