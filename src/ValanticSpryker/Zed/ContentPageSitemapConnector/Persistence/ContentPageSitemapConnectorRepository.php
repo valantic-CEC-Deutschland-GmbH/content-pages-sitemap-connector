@@ -21,7 +21,7 @@ class ContentPageSitemapConnectorRepository extends AbstractRepository implement
      * @param int $page
      * @param int $pageLimit
      *
-     * @return array<\Generated\Shared\Transfer\SitemapUrlTransfer>
+     * @return array<\Generated\Shared\Transfer\SitemapUrlNodeTransfer>
      */
     public function findActiveContentPages(StoreTransfer $currentStore, int $page, int $pageLimit): array
     {
@@ -41,7 +41,7 @@ class ContentPageSitemapConnectorRepository extends AbstractRepository implement
 
         return $this->getFactory()
             ->createContentPageSitemapMapper()
-            ->mapUrlEntitiesToSitemapUrlTransfers(
+            ->mapUrlEntitiesToSitemapUrlNodeTransfers(
                 $query->find(),
             );
     }
