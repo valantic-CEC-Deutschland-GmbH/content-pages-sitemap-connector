@@ -13,7 +13,7 @@ interface ContentPageSitemapConnectorRepositoryInterface
      * @param int $page
      * @param int $pageLimit
      *
-     * @return array<\Generated\Shared\Transfer\SitemapUrlTransfer>
+     * @return array<\Generated\Shared\Transfer\SitemapUrlNodeTransfer>
      */
     public function findActiveContentPages(StoreTransfer $currentStore, int $page, int $pageLimit): array;
 }
