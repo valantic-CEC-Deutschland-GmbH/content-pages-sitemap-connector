@@ -2,10 +2,10 @@
     "name": "valantic-spryker/content-pages-sitemap-connector",
     "type": "library",
     "description": "Extends main Sitemap module to render content (CMS) page links",
-    "license": "MIT",
+    "license": "proprietary",
     "require": {
         "php": ">=7.4",
-        "valantic-spryker/sitemap": "^4.0"
+        "valantic-spryker/sitemap": "^4.0.4"
     },
     "autoload": {
         "psr-4": {
