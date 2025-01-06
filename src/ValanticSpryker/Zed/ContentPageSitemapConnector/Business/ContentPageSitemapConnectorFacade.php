@@ -14,10 +14,10 @@ class ContentPageSitemapConnectorFacade extends AbstractFacade implements Conten
     /**
      * @inheritDoc
      */
-    public function createSitemapXml(): array
+    public function createSitemapXml(string $storeName): array
     {
         return $this->getFactory()
             ->createProductSitemapCreator()
-            ->createContentPagesSitemapXml();
+            ->createContentPagesSitemapXml($storeName);
     }
 }
