@@ -13,11 +13,13 @@ use ValanticSpryker\Zed\Sitemap\Dependency\Plugin\SitemapCreatorPluginInterface;
 class ContentPageSitemapCreatorPlugin extends AbstractPlugin implements SitemapCreatorPluginInterface
 {
     /**
+     * @param string $storeName
+     *
      * @return array<\Generated\Shared\Transfer\SitemapFileTransfer>
      */
-    public function createSitemapXml(): array
+    public function createSitemapXml(string $storeName): array
     {
         return $this->getFacade()
-            ->createSitemapXml();
+            ->createSitemapXml($storeName);
     }
 }

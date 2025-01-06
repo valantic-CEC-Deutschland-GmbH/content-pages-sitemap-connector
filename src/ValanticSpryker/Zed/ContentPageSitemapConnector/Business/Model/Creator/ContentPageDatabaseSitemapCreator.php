@@ -51,18 +51,24 @@ class ContentPageDatabaseSitemapCreator implements ContentPageSitemapCreatorInte
     }
 
     /**
+     * @param string $storeName
+     *
      * @return array<\Generated\Shared\Transfer\SitemapFileTransfer>
      */
-    public function createContentPagesSitemapXml(): array
+    public function createContentPagesSitemapXml(string $storeName): array
     {
         $urlLimit = $this->config->getSitemapUrlLimit();
         $sitemapList = [];
-        $currentStoreTransfer = $this->storeFacade->getCurrentStore();
         $page = 1;
+
+        $store = $this->storeFacade->findStoreByName($storeName);
+        if (!$store) {
+            return $sitemapList;
+        }
 
         do {
             $urlList = $this->repository->findActiveContentPages(
-                $currentStoreTransfer,
+                $store,
                 $page,
                 $urlLimit,
             );
@@ -70,7 +76,7 @@ class ContentPageDatabaseSitemapCreator implements ContentPageSitemapCreatorInte
             $sitemapTransfer = $this->sitemapService->createSitemapXmlFileTransfer(
                 $urlList,
                 $page,
-                $currentStoreTransfer->getName(),
+                $storeName,
                 ContentPageSitemapConnectorConstants::RESOURCE_TYPE,
             );
 
