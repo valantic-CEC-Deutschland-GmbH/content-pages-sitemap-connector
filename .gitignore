@@ -33,9 +33,12 @@ src/*/Zed/*/Static/Assets/sprite
 # Propel classes
 src/*/Zed/*/Persistence/Propel/Base/*
 src/*/Zed/*/Persistence/Propel/Map/*
+src/Orm
 
 # tests
 tests/**/_generated/
 tests/_output/*
 !tests/_output/.gitkeep
 tests/app/*
+
+src/Generated

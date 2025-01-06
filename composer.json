@@ -5,7 +5,7 @@
     "license": "proprietary",
     "require": {
         "php": ">=7.4",
-        "valantic-spryker/sitemap": "^4.0.4"
+        "valantic-spryker/sitemap": "^1.0.0"
     },
     "autoload": {
         "psr-4": {
@@ -33,9 +33,6 @@
         ],
         "process-timeout": 900,
         "chromium-revision": 814168,
-        "gitlab-domains": [
-            "gitlab.nxs360.com"
-        ],
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
@@ -58,12 +55,6 @@
         "spryker-sdk/phpstan-spryker": "^0.4.0",
         "spryker/architecture-sniffer": "^0.5.7",
         "spryker/development": "^3.34"
-    },
-    "repositories": {
-        "gitlab.nxs360.com/461": {
-            "type": "composer",
-            "url": "https://gitlab.nxs360.com/api/v4/group/461/-/packages/composer/packages.json"
-        }
     },
     "scripts": {
         "cs-fix": "phpcbf --standard=phpcs.xml src",
