@@ -5,7 +5,6 @@ declare(strict_types = 1);
 namespace ValanticSpryker\Zed\ContentPageSitemapConnector\Persistence;
 
 use Generated\Shared\Transfer\StoreTransfer;
-use Orm\Zed\Cms\Persistence\Map\SpyCmsPageStoreTableMap;
 use Orm\Zed\Url\Persistence\Map\SpyUrlTableMap;
 use Orm\Zed\UrlStorage\Persistence\Map\SpyUrlStorageTableMap;
 use Propel\Runtime\ActiveQuery\Criteria;

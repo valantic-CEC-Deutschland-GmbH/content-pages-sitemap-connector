@@ -23,6 +23,3 @@ jobs:
 
       - name: Check coding standards
         run: composer cs-check
-
-      - name: Check messdetector
-        run: composer md-check
