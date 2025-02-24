@@ -5,7 +5,7 @@
     "license": "proprietary",
     "require": {
         "php": ">=8.1",
-        "valantic-spryker/sitemap": "^2.0.0"
+        "valantic-spryker/sitemap": "^2.0.2"
     },
     "autoload": {
         "psr-4": {
