@@ -8,6 +8,7 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 
 /**
  * @method \ValanticSpryker\Zed\ContentPageSitemapConnector\Business\ContentPageSitemapConnectorBusinessFactory getFactory()
+ * @method \ValanticSpryker\Zed\ContentPageSitemapConnector\Persistence\ContentPageSitemapConnectorRepositoryInterface getRepository()
  */
 class ContentPageSitemapConnectorFacade extends AbstractFacade implements ContentPageSitemapConnectorFacadeInterface
 {

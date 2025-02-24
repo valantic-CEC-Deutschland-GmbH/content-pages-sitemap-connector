@@ -12,7 +12,14 @@ use Spryker\Zed\Kernel\Container;
  */
 class ContentPageSitemapConnectorDependencyProvider extends AbstractBundleDependencyProvider
 {
+    /**
+     * @var string
+     */
     public const SERVICE_SITEMAP = 'SITEMAP_SERVICE';
+
+    /**
+     * @var string
+     */
     public const FACADE_STORE = 'FACADE_STORE';
 
     /**

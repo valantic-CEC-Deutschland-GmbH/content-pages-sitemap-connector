@@ -11,6 +11,7 @@ use ValanticSpryker\Zed\ContentPageSitemapConnector\Persistence\Mapper\ContentPa
 
 /**
  * @method \ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorConfig getConfig()
+ * @method \ValanticSpryker\Zed\ContentPageSitemapConnector\Persistence\ContentPageSitemapConnectorRepositoryInterface getRepository()
  */
 class ContentPageSitemapConnectorPersistenceFactory extends AbstractPersistenceFactory
 {

@@ -9,6 +9,7 @@ use ValanticSpryker\Zed\Sitemap\Dependency\Plugin\SitemapCreatorPluginInterface;
 
 /**
  * @method \ValanticSpryker\Zed\ContentPageSitemapConnector\Business\ContentPageSitemapConnectorFacadeInterface getFacade()
+ * @method \ValanticSpryker\Zed\ContentPageSitemapConnector\ContentPageSitemapConnectorConfig getConfig()
  */
 class ContentPageSitemapCreatorPlugin extends AbstractPlugin implements SitemapCreatorPluginInterface
 {
